@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<link>
+  <meta charset="UTF-8">
+  <title>阿萌Among</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" type="text/css"  href="css/chat.css"/>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid head bg-dark">
+  <div class="row head_row">
+    <div class="col-md-1 col-2 profile_img_div">
+      <img class="profile_img" src="img/logo-square.png"></img>
+    </div>
+    <div class="col-md-7 col-6 profile">
+     <p>Among阿萌<small>最近聊天 10:30 PM</small></p>
+  </div>
+  </div>
+</div>
+<div id="chat" class="container-fluid chat">
+  <div class="row conv_left">
+    <div class="col-md-1 col-2 head_img_div_left">
+      <img class="head_img" src="img/among-bot.png"></img>
+    </div>
+    <div class="col-md-4 col-6 conv bubble">
+        <span class="bot_left"></span>
+        <span class="top_left"></span>
+      <p>我是虚拟助手<strong>阿萌(Among)</strong>，可以帮助你记录重要的<strong>日程</strong>并及时<strong>提醒</strong>你!<img src="img/deadline.png"></img> <small class="time">2019/10/7 下午10:59:38</small></p>
+  </div>
+</div>
+
+</div>
+<div class="container-fluid bg-dark footer">
+
+  <div class="row bg-dark typingContent_row">
+    <div class="col-md-1 col-1"></div>
+    <div class="col-md-9 col-8">
+      <input type="text" id="msg" class="msg form-control " placeholder="对阿萌说点什么..."></input>
+    </div>
+  <div class="col-md-2 col-2 send_btn_div" >
+    <button type="button" id="send_msg" class="send_btn btn btn-info " >send</button>
+  </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script  src="js/chat.js"></script>
+
+</body>
+</html>
