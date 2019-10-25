@@ -15,7 +15,7 @@ import java.util.Map;
  * @date Date : 2019年10月10日 19:26
  */
 @RestController
-@RequestMapping(value = "/", method = RequestMethod.POST, consumes="application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
+@RequestMapping(value = "/api", method = RequestMethod.POST, consumes="application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 public class ChatAPI {
     @RequestMapping(value = "/chat", method = RequestMethod.POST)
     public String command(@RequestBody String words){
