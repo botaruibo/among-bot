@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.among.chatbot</groupId>
-	<artifactId>among</artifactId>
+	<artifactId>among-bot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>among</name>
 	<description>Demo project for Spring Boot</description>
@@ -71,7 +71,7 @@
 				<configuration>
 					<!-- made of '[a-z0-9-_.]' -->
 
-					<imageName>rui-job-${project.artifactId}</imageName>
+					<imageName>${project.artifactId}</imageName>
 					<dockerDirectory>${project.basedir}</dockerDirectory>
 					<!--指定远程 docker api地址-->
 					<!--<dockerHost>http://114.55.242.227:2375</dockerHost>-->
