@@ -11,8 +11,9 @@
 	<groupId>com.among.chatbot</groupId>
 	<artifactId>among-bot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>among</name>
-	<description>Demo project for Spring Boot</description>
+	<packaging>war</packaging>
+	<name>among-bot</name>
+	<description>a chat bot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -23,6 +24,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-servlet-api</artifactId>
+			<version>8.5.47</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -62,6 +75,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceExcludes>src/main/resources/**</warSourceExcludes>
+					<warName>amongbot-${version}</warName>
+				</configuration>
 			</plugin>
 			<!-- docker -->
 			<plugin>

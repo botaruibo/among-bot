@@ -37,7 +37,9 @@ function appendRemoteMsg(msg){
   $('.chat').animate({scrollTop:scrollHeight+200},"slow");
 }
 function handleRequestMsg(msg){
-  var req = '{"words":' + msg + '}';
+  var req = {
+      words: msg
+  }
   console.log(req);
   $.ajax({
     //请求方式
@@ -48,7 +50,7 @@ function handleRequestMsg(msg){
      //请求地址
      url : "api/chat",
      //数据，json字符串
-      data: JSON.stringify(msg),
+      data: JSON.stringify(req),
      dataType : "json",
      success : function(data) {
       console.log(data);
