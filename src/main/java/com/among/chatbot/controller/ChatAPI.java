@@ -22,7 +22,7 @@ public class ChatAPI {
     public String command(@RequestBody ChatRequest request){
 
         Map map = new HashMap<String, String>();
-        map.put("words", "我还在积极学习中，对您说的：“" + request.getWords() +"”还不能理解。请等待阿萌一些时间，很快我就能为你设置私人行程了^-^");
+        map.put("words", "阿萌还在积极学习中，对您说的：“" + request.getWords() +"”还不能理解。请等待阿萌一些时间，很快我就能为你设置私人行程啦^-^");
         return JSON.toJSONString(map);
     }
 }
